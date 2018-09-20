@@ -36,6 +36,11 @@ public class BraverManager : MonoBehaviour {
 		}
 	}
 
+	private void OnCollisionEnter(Collision other) {
+		
+		AtackSlime(other.gameObject);
+	}
+
 	private void CliskAction(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit = new RaycastHit();
@@ -69,8 +74,9 @@ public class BraverManager : MonoBehaviour {
 		agent.destination = targetPosition;
 	}
 
-	private void OnCollisionEnter(Collision other) {
-		if(other.gameObject == target){
+	private void AtackSlime(GameObject other){
+		if(target == other){
+			other.GetComponent<SlimeManager>().KnockDown();
 			ChangeNavTarget(null);
 		}
 	}
