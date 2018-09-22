@@ -5,7 +5,9 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - effectKnockdoun: {fileID: 1446809238270822, guid: dd192254e9ce0d442bb0ebc0186bb765,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

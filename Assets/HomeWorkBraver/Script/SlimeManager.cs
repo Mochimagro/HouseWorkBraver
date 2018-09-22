@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class SlimeManager : MonoBehaviour {
 
-	private GameObject effectKnockdoun;
+	public GameObject effectKnockdoun;
 
-	private void Start() {
-		effectKnockdoun = (GameObject) Resources.Load("Effect/EffectKnockdown");
-	}
-
-	private void OnCollisionEnter(Collision other) {
+	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.CompareTag("Weapon")){
+			Debug.Log("Hit");
 			KnockDown();
 		}
 	}
 
-	private void KnockDown(){
+	public void KnockDown(){
 		Destroy(gameObject);
 		var eff = Instantiate(effectKnockdoun,transform.position,Quaternion.identity);
 	}
+
+	
+	
 
 }

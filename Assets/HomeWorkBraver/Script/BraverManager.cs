@@ -6,7 +6,9 @@ using UnityEngine.AI;
 public class BraverManager : MonoBehaviour {
 
 	public GameObject target;
-
+	public GameObject weapon;
+	private BoxCollider weaponCollider;
+	
 	private NavMeshAgent agent;
 	private Animator animator;
 
@@ -14,6 +16,8 @@ public class BraverManager : MonoBehaviour {
 		agent = GetComponent<NavMeshAgent>();
 		animator = GetComponent<Animator>();
 		animator.speed = 1.5f;
+		weaponCollider = weapon.GetComponent<BoxCollider>();
+		weaponCollider.enabled = false;
 
         // ターゲットの位置を目的地に設定する。
         //ChangeNavTarget(target);
@@ -30,12 +34,15 @@ public class BraverManager : MonoBehaviour {
 		if(Input.GetMouseButton(0) && target == null){
 			Debug.Log("drag");
 		}
+		
 	}
 
 	private void OnCollisionEnter(Collision other) {
 		
 		AtackSlime(other.gameObject);
 	}
+
+	
 
 	private void CliskAction(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -73,7 +80,21 @@ public class BraverManager : MonoBehaviour {
 	private void AtackSlime(GameObject other){
 		if(target == other){
 			animator.SetTrigger("Attack");
-			ChangeNavTarget(null);
+			
 		}
 	}
+
+	private void Hit(){
+		target.GetComponent<SlimeManager>().KnockDown();
+		ChangeNavTarget(null);
+	}
+
+	private void HittingAtack(){
+		weaponCollider.enabled = true;
+	}
+
+	private void FinishAtack(){
+		weaponCollider.enabled = false;
+	}
+
 }
