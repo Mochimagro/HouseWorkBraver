@@ -10,7 +10,13 @@ public class SlimeManager : MonoBehaviour {
 		effectKnockdoun = (GameObject) Resources.Load("Effect/EffectKnockdown");
 	}
 
-	public void KnockDown(){
+	private void OnCollisionEnter(Collision other) {
+		if(other.gameObject.CompareTag("Weapon")){
+			KnockDown();
+		}
+	}
+
+	private void KnockDown(){
 		Destroy(gameObject);
 		var eff = Instantiate(effectKnockdoun,transform.position,Quaternion.identity);
 	}

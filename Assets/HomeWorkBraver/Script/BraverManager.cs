@@ -23,10 +23,6 @@ public class BraverManager : MonoBehaviour {
 
 		animator.SetFloat("Speed",agent.velocity.magnitude);
 
-		if(agent.isStopped){
-			target = null;
-		}
-
 		if(Input.GetMouseButtonDown(0)){
 			CliskAction();
 		}
@@ -76,7 +72,7 @@ public class BraverManager : MonoBehaviour {
 
 	private void AtackSlime(GameObject other){
 		if(target == other){
-			other.GetComponent<SlimeManager>().KnockDown();
+			animator.SetTrigger("Attack");
 			ChangeNavTarget(null);
 		}
 	}
