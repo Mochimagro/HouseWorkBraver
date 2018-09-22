@@ -32,13 +32,16 @@ public class BraverManager : MonoBehaviour {
 		}
 
 		if(Input.GetMouseButton(0) && target == null){
-			Debug.Log("drag");
+			//Debug.Log("drag");
 		}
 		
 	}
 
 	private void OnCollisionEnter(Collision other) {
 		
+	}
+
+	private void OnTriggerEnter(Collider other) {
 		AtackSlime(other.gameObject);
 	}
 
