@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Slime
   - Braver
+  - Weapon
   layers:
   - Default
   - TransparentFX
