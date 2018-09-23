@@ -9,6 +9,7 @@ public class BraverManager : MonoBehaviour {
 	public GameObject weapon;
 	private BoxCollider weaponCollider;
 	
+	private SphereCollider attackArea;
 	private NavMeshAgent agent;
 	private Animator animator;
 
@@ -18,6 +19,8 @@ public class BraverManager : MonoBehaviour {
 		animator.speed = 1.5f;
 		weaponCollider = weapon.GetComponent<BoxCollider>();
 		weaponCollider.enabled = false;
+		attackArea = GetComponent<SphereCollider>();
+		attackArea.enabled = false;
 
         // ターゲットの位置を目的地に設定する。
         //ChangeNavTarget(target);
@@ -42,10 +45,15 @@ public class BraverManager : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter(Collider other) {
+		
 		AtackSlime(other.gameObject);
 	}
 
-	
+	// private void OnTriggerStay(Collider other) {
+	// 		if(other.gameObject == target){
+	// 			AtackSlime(other.gameObject);
+	// 		}
+	// }
 
 	private void CliskAction(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -55,6 +63,7 @@ public class BraverManager : MonoBehaviour {
 				switch(target.tag){
 					case "Slime":
 						ChangeNavTarget(target);
+						attackArea.enabled = true;
 						break;
 
 					default:
@@ -83,9 +92,10 @@ public class BraverManager : MonoBehaviour {
 	private void AtackSlime(GameObject other){
 		if(target == other){
 			animator.SetTrigger("Attack");
-			
+			attackArea.enabled = false;
 		}
 	}
+
 
 	private void Hit(){
 		target.GetComponent<SlimeManager>().KnockDown();
