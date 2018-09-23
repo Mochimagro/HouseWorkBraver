@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 	private int braverLevel = 1;
 	public TextMeshProUGUI TextExp;
 	public TextMeshProUGUI TextLevel;
+	public Slider SliderExpGauge;
 
 	private void Start() {
 		braverExp = 0;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour {
 		braverLevel = 1;
 		SetExpText();
 		SetLevelText();
+		SetExpSliderMaxValue();
 	}
 
 	public void AddEXP(int value){
@@ -26,6 +28,7 @@ public class GameManager : MonoBehaviour {
 			LevelUp();
 		}
 		SetExpText();
+		SetExpSlider();
 	}
 
 	private void SetExpText(){
@@ -36,6 +39,15 @@ public class GameManager : MonoBehaviour {
 		TextLevel.text = "Lv." + braverLevel;
 	}
 
+	private void SetExpSlider(){
+		SliderExpGauge.value = braverExp;
+	}
+
+	private void SetExpSliderMaxValue(){
+		SliderExpGauge.maxValue = nextExp;
+		SetExpSlider();
+	}
+
 	private void LevelUp(){
 		braverExp -= nextExp;
 		braverLevel++;
@@ -43,6 +55,7 @@ public class GameManager : MonoBehaviour {
 		if(braverExp >= nextExp){
 			LevelUp();
 		}
+		SetExpSliderMaxValue();
 		SetLevelText();
 	}
 
