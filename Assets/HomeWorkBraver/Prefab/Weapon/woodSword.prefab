@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4357469122516120}
   - component: {fileID: 65679733866572192}
+  - component: {fileID: 54823077647956656}
   m_Layer: 0
   m_Name: woodSword
   m_TagString: Weapon
@@ -112,6 +113,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1983510143175898}
   m_Mesh: {fileID: 4300000, guid: 2668de354f7e7d74085f94a7daf534b8, type: 3}
+--- !u!54 &54823077647956656
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1910004330936532}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &65679733866572192
 BoxCollider:
   m_ObjectHideFlags: 1
