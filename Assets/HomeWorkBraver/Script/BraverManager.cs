@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class BraverManager : MonoBehaviour {
 
 	public GameObject target;
+	private List<GameObject> targetList = new List<GameObject>();
 	public GameObject weapon;
 	private BoxCollider weaponCollider;
 	
@@ -48,13 +49,7 @@ public class BraverManager : MonoBehaviour {
 		
 		AtackSlime(other.gameObject);
 	}
-
-	// private void OnTriggerStay(Collider other) {
-	// 		if(other.gameObject == target){
-	// 			AtackSlime(other.gameObject);
-	// 		}
-	// }
-
+	
 	private void CliskAction(){
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit = new RaycastHit();
