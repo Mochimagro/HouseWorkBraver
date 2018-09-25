@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class BraverManager : MonoBehaviour {
 
 	public GameObject target;
-	private List<GameObject> targetList = new List<GameObject>();
+	[SerializeField]private List<GameObject> targetList = new List<GameObject>();
 	public GameObject weapon;
 	private BoxCollider weaponCollider;
 	
@@ -22,6 +22,7 @@ public class BraverManager : MonoBehaviour {
 		weaponCollider.enabled = false;
 		attackArea = GetComponent<SphereCollider>();
 		attackArea.enabled = false;
+		targetList.Clear();
 
         // ターゲットの位置を目的地に設定する。
         //ChangeNavTarget(target);
@@ -57,12 +58,19 @@ public class BraverManager : MonoBehaviour {
 				var target = hit.collider.gameObject;
 				switch(target.tag){
 					case "Slime":
-						ChangeNavTarget(target);
-						attackArea.enabled = true;
+						if(this.target == null){
+							ChangeNavTarget(target);
+							attackArea.enabled = true;
+						}else{
+							targetList.Add(target);
+						}
 						break;
 
 					default:
-						ChangeNavTarget(hit.point);
+						if(this.target == null){
+							ChangeNavTarget(hit.point);
+						}
+						
 						break;
 				}
 			}
@@ -75,6 +83,7 @@ public class BraverManager : MonoBehaviour {
 			this.target = null;
 			return;
 		}
+		attackArea.enabled = true;
 		this.target = target;
 		agent.destination = target.transform.position;
 	}
@@ -91,10 +100,19 @@ public class BraverManager : MonoBehaviour {
 		}
 	}
 
+	private void RefreshList(){
+		int i = 0;
+		while(i < targetList.Count){
+			if(targetList[i] == null){
+				targetList.RemoveAt(i);
+			}else{
+				i++;
+			}
+		}
+	}
 
 	private void Hit(){
 		target.GetComponent<SlimeManager>().KnockDown();
-		ChangeNavTarget(null);
 	}
 
 	private void HittingAtack(){
@@ -103,6 +121,13 @@ public class BraverManager : MonoBehaviour {
 
 	private void FinishAtack(){
 		weaponCollider.enabled = false;
+
+		RefreshList();
+		if(targetList.Count > 0){
+			ChangeNavTarget(targetList[0]);
+		}else{
+			ChangeNavTarget(null);
+		}
 	}
 
 }
