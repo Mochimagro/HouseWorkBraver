@@ -13,7 +13,7 @@ public class TapEffectManager : MonoBehaviour {
 
 	private void Update() {
 		if(Input.GetMouseButtonDown(0)){
-			var pos = effectCamera.ScreenToWorldPoint(Input.mousePosition + effectCamera.transform.forward * 10);
+			var pos = effectCamera.ScreenToWorldPoint(Input.mousePosition +  effectCamera.transform.forward * 10);//
 			tapEffect.transform.position = pos;
 			tapEffect.Emit(Random.Range(4,7));
 		}
