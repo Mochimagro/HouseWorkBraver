@@ -20,7 +20,7 @@ public class SlimeManager : MonoBehaviour {
 	public void KnockDown(){
 		Destroy(gameObject);
 		var eff = Instantiate(effectKnockdoun,transform.position,Quaternion.identity);
-		GameObject.Find("GameManager").GetComponent<GameManager>().AddEXP(exp);
+		GameObject.Find("GameManager").GetComponent<HomeManager>().AddEXP(exp);
 	}
 
 }

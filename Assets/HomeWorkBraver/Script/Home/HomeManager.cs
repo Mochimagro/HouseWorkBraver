@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class HomeManager : MonoBehaviour {
 
 	private int braverExp;
 	private int nextExp = 10;

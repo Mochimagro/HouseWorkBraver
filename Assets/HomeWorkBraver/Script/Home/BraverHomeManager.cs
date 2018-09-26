@@ -115,11 +115,11 @@ public class BraverHomeManager : MonoBehaviour {
 		target.GetComponent<SlimeManager>().KnockDown();
 	}
 
-	private void HittingAtack(){
+	private void HittingAttack(){
 		weaponCollider.enabled = true;
 	}
 
-	private void FinishAtack(){
+	private void FinishAttack(){
 		weaponCollider.enabled = false;
 
 		RefreshList();

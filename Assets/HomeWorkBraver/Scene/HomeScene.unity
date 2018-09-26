@@ -442,6 +442,11 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198204528597021164, guid: 8a2e8af75b1589e41bf0876750aa1f30,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a2e8af75b1589e41bf0876750aa1f30, type: 2}
   m_IsPrefabParent: 0
@@ -1128,7 +1133,7 @@ GameObject:
   - component: {fileID: 1268022339}
   - component: {fileID: 1268022337}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: HomeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
