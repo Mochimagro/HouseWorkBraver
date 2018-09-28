@@ -9,9 +9,12 @@ public class HomeManager : MonoBehaviour {
 	private int braverExp;
 	private int nextExp = 10;
 	private int braverLevel = 1;
-	public TextMeshProUGUI TextExp;
+	public TextMeshProUGUI TextTotalExp;
 	public TextMeshProUGUI TextLevel;
 	public Slider SliderExpGauge;
+
+	public Canvas CanvasUIText;
+	public GameObject TextGetExp;
 
 	private void Start() {
 		braverExp = 0;
@@ -22,17 +25,23 @@ public class HomeManager : MonoBehaviour {
 		SetExpSliderMaxValue();
 	}
 
-	public void AddEXP(int value){
+	public void AddEXP(int value,Transform target){
 		braverExp += value;
 		if(braverExp >= nextExp){
 			LevelUp();
 		}
 		SetExpText();
 		SetExpSlider();
+
+		var tmpText = Instantiate(TextGetExp);
+		tmpText.transform.SetParent(CanvasUIText.transform,false);
+		tmpText.GetComponent<RectTransform>().position = RectTransformUtility.WorldToScreenPoint(Camera.main,target.position);
+		tmpText.GetComponent<TextMeshProUGUI>().text = "+" + value + "Exp";
+		Destroy(tmpText,2f);
 	}
 
 	private void SetExpText(){
-		TextExp.text = braverExp + " / " + nextExp;
+		TextTotalExp.text = braverExp + " / " + nextExp;
 	}
 
 	private void SetLevelText(){
