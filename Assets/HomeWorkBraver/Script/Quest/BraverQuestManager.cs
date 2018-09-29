@@ -35,7 +35,6 @@ public class BraverQuestManager : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Monster")){
             if(interval <= 0){
-                weaponCollider.enabled = true;
                 animator.SetTrigger("Attack");
                 interval = intervalTime;
             }
@@ -59,7 +58,7 @@ public class BraverQuestManager : MonoBehaviour {
     }
 
     private void HittingAttack(){
-        //weaponCollider.enabled = true;
+        weaponCollider.enabled = true;
     }
 
     private void FinishAttack(){

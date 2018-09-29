@@ -9,6 +9,7 @@ public class MonsterManager : MonoBehaviour {
 
 	public float speed = 5f;
 	public GameObject effectKnockdown;
+	public GameObject effectAttackMonster;
 	private Rigidbody rbody;
 	private bool onFloor;
 	private BraverQuestManager braver;
@@ -33,6 +34,9 @@ public class MonsterManager : MonoBehaviour {
 			}
 		}
 		if(other.gameObject.CompareTag("Braver")){
+			var pos = other.transform.position;
+			pos.y += 2f;
+			Instantiate(effectAttackMonster,pos,Quaternion.identity);
 			braver.Damage(atk);
 			KnockBack();
 		}
@@ -48,6 +52,7 @@ public class MonsterManager : MonoBehaviour {
 			
 		}
 	}
+	
 
 	public void Damage(int atk){
 		hp -= atk;

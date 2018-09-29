@@ -699,11 +699,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 477590, guid: b63d43bd4e6feeb498069e50954cb50a, type: 2}
   m_PrefabInternal: {fileID: 213997768}
---- !u!1 &237719743 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1500088915822928, guid: f9a6010b9b49c154f905f0f75bdecafe,
-    type: 2}
-  m_PrefabInternal: {fileID: 765890748}
 --- !u!1001 &264696728
 Prefab:
   m_ObjectHideFlags: 0
@@ -1966,31 +1961,6 @@ Prefab:
     - target: {fileID: 4023692325032430, guid: f9a6010b9b49c154f905f0f75bdecafe, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 54853544317407128, guid: f9a6010b9b49c154f905f0f75bdecafe,
-        type: 2}
-      propertyPath: m_Constraints
-      value: 126
-      objectReference: {fileID: 0}
-    - target: {fileID: 136772578764318428, guid: f9a6010b9b49c154f905f0f75bdecafe,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95557025560258356, guid: f9a6010b9b49c154f905f0f75bdecafe,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8d954cc6f67d3d04386d74514d6f316c, type: 2}
-    - target: {fileID: 114851329899086952, guid: f9a6010b9b49c154f905f0f75bdecafe,
-        type: 2}
-      propertyPath: Weapon
-      value: 
-      objectReference: {fileID: 237719743}
-    - target: {fileID: 65310507782567028, guid: f9a6010b9b49c154f905f0f75bdecafe,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9a6010b9b49c154f905f0f75bdecafe, type: 2}
@@ -5057,7 +5027,8 @@ AudioSource:
   m_GameObject: {fileID: 2107218109}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243810262800881638, guid: b2a2473c858d3844c971ad29a0d3ea15,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 4bf69d387305dc64996e32f137993d3c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7

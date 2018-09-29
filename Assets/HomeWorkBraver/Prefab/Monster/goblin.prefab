@@ -157,3 +157,5 @@ MonoBehaviour:
   speed: 200
   effectKnockdown: {fileID: 1446809238270822, guid: dd192254e9ce0d442bb0ebc0186bb765,
     type: 2}
+  effectAttackMonster: {fileID: 1642258846666864, guid: 75040fdf90bac1a45964c500b8e286cc,
+    type: 2}
