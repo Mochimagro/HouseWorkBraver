@@ -21,7 +21,7 @@ public class IdleChanger : MonoBehaviour
 	public float _threshold = 0.5f;				// ランダム判定の閾値
 	public float _interval = 2f;				// ランダム判定のインターバル
 	//private float _seed = 0.0f;					// ランダム判定用シード
-	
+	public int characterNumber = 1;
 
 
 	// Use this for initialization
@@ -54,7 +54,7 @@ public class IdleChanger : MonoBehaviour
 		if (anim.GetBool ("Next")) {
 			// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
 			currentState = anim.GetCurrentAnimatorStateInfo (0);
-			if (previousState.nameHash != currentState.nameHash) {
+			if (previousState.fullPathHash != currentState.fullPathHash) {
 				anim.SetBool ("Next", false);
 				previousState = currentState;				
 			}
@@ -64,7 +64,7 @@ public class IdleChanger : MonoBehaviour
 		if (anim.GetBool ("Back")) {
 			// 現在のステートをチェックし、ステート名が違っていたらブーリアンをfalseに戻す
 			currentState = anim.GetCurrentAnimatorStateInfo (0);
-			if (previousState.nameHash != currentState.nameHash) {
+			if (previousState.fullPathHash != currentState.fullPathHash) {
 				anim.SetBool ("Back", false);
 				previousState = currentState;
 			}
@@ -74,10 +74,10 @@ public class IdleChanger : MonoBehaviour
 
 	void OnGUI()
 	{
-				GUI.Box(new Rect(Screen.width - 110 , 10 ,100 ,90), "Change Motion");
-				if(GUI.Button(new Rect(Screen.width - 100 , 40 ,80, 20), "Next"))
+				GUI.Box(new Rect(Screen.width - 110 , 10 + characterNumber * 100,100 ,90), "Change Motion");
+				if(GUI.Button(new Rect(Screen.width - 100 , 40 + characterNumber * 100 ,80, 20), "Next"))
 					anim.SetBool ("Next", true);
-				if(GUI.Button(new Rect(Screen.width - 100 , 70 ,80, 20), "Back"))
+				if(GUI.Button(new Rect(Screen.width - 100 , 70 + characterNumber * 100 ,80, 20), "Back"))
 					anim.SetBool ("Back", true);
 	}
 

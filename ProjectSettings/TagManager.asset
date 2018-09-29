@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Slime
   - Braver
+  - Weapon
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -15,6 +17,9 @@ TagManager:
   - UI
   - 
   - 
+  - Stage
+  - Brever
+  - Monster
   - 
   - 
   - 
@@ -34,12 +39,12 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - UIEffect
   - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Effect
+    uniqueID: 3117966699
     locked: 0

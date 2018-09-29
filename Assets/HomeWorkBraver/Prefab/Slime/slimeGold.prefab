@@ -19,10 +19,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4970474421208326}
+  - component: {fileID: 114730184000011924}
   - component: {fileID: 54024451001129974}
   - component: {fileID: 95270581973608240}
   - component: {fileID: 65522039755177038}
-  - component: {fileID: 65517683635094116}
   m_Layer: 0
   m_Name: slimeGold
   m_TagString: Slime
@@ -202,25 +202,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!65 &65517683635094116
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1260249830604296}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 2, z: 3}
-  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!65 &65522039755177038
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1260249830604296}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1b0a9c6e40b4c454a841271b81c69c94, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -243,3 +231,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114730184000011924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1260249830604296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008dcc1027191054db55908be03145df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effectKnockdoun: {fileID: 1446809238270822, guid: dd192254e9ce0d442bb0ebc0186bb765,
+    type: 2}
+  exp: 10
