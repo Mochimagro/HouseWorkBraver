@@ -699,6 +699,11 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 477590, guid: b63d43bd4e6feeb498069e50954cb50a, type: 2}
   m_PrefabInternal: {fileID: 213997768}
+--- !u!1 &237719743 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1500088915822928, guid: f9a6010b9b49c154f905f0f75bdecafe,
+    type: 2}
+  m_PrefabInternal: {fileID: 765890748}
 --- !u!1001 &264696728
 Prefab:
   m_ObjectHideFlags: 0
@@ -1962,6 +1967,31 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 54853544317407128, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 136772578764318428, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95557025560258356, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8d954cc6f67d3d04386d74514d6f316c, type: 2}
+    - target: {fileID: 114851329899086952, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: Weapon
+      value: 
+      objectReference: {fileID: 237719743}
+    - target: {fileID: 65310507782567028, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9a6010b9b49c154f905f0f75bdecafe, type: 2}
   m_IsPrefabParent: 0
@@ -2032,7 +2062,6 @@ GameObject:
   m_Component:
   - component: {fileID: 914217680}
   - component: {fileID: 914217681}
-  - component: {fileID: 914217682}
   - component: {fileID: 914217683}
   m_Layer: 0
   m_Name: Prain_Field_SetRight
@@ -2084,18 +2113,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!65 &914217682
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 914217679}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13, y: 1, z: 3}
-  m_Center: {x: 0, y: -0.45, z: 0}
 --- !u!54 &914217683
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2104,8 +2121,8 @@ Rigidbody:
   m_GameObject: {fileID: 914217679}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -2754,9 +2771,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1112109724}
   - component: {fileID: 1112109725}
+  - component: {fileID: 1112109726}
+  - component: {fileID: 1112109727}
   m_Layer: 0
   m_Name: Field
-  m_TagString: Untagged
+  m_TagString: Field
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2791,6 +2810,30 @@ MonoBehaviour:
   Right: {fileID: 914217679}
   Center: {fileID: 1471904998}
   Left: {fileID: 2039794725}
+--- !u!65 &1112109726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112109723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 64, y: 1, z: 3}
+  m_Center: {x: 0, y: -0.45, z: 0}
+--- !u!65 &1112109727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1112109723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 32, z: 3}
+  m_Center: {x: 32, y: 15, z: 0}
 --- !u!1001 &1139387648
 Prefab:
   m_ObjectHideFlags: 0
@@ -3616,7 +3659,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1471904999}
   - component: {fileID: 1471905000}
-  - component: {fileID: 1471905001}
   - component: {fileID: 1471905002}
   m_Layer: 0
   m_Name: Prain_Field_SetCenter
@@ -3668,18 +3710,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!65 &1471905001
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1471904998}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13, y: 1, z: 3}
-  m_Center: {x: 0, y: -0.45, z: 0}
 --- !u!54 &1471905002
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3688,8 +3718,8 @@ Rigidbody:
   m_GameObject: {fileID: 1471904998}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -4774,7 +4804,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2039794726}
   - component: {fileID: 2039794727}
-  - component: {fileID: 2039794728}
   - component: {fileID: 2039794729}
   m_Layer: 0
   m_Name: Prain_Field_SetLeft
@@ -4826,18 +4855,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!65 &2039794728
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2039794725}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13, y: 1, z: 3}
-  m_Center: {x: 0, y: -0.45, z: 0}
 --- !u!54 &2039794729
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4846,8 +4863,8 @@ Rigidbody:
   m_GameObject: {fileID: 2039794725}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -5043,7 +5060,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4bf69d387305dc64996e32f137993d3c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0

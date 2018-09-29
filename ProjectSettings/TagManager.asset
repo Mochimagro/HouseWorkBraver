@@ -8,6 +8,7 @@ TagManager:
   - Braver
   - Weapon
   - Monster
+  - Field
   layers:
   - Default
   - TransparentFX

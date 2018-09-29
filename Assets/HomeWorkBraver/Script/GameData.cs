@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
-public class BraverStatus : MonoBehaviour {
+public class GameData : MonoBehaviour {
 
 	
 
