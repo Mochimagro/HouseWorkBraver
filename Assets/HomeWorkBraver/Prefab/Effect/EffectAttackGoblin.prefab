@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1642258846666864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.058933, y: 4.28, z: -1.27}
+  m_LocalPosition: {x: 16.058933, y: 4.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4920366407180874}
@@ -386,7 +386,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.2352941, b: 0.2352941, a: 1}
+      maxColor: {r: 0.559, g: 0.1315294, b: 0.1315294, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -745,7 +745,7 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0.45, y: 0.45, z: 0}
+    m_Position: {x: 0.45, y: 0.45, z: -0.8}
     m_Rotation: {x: 45, y: -90, z: 0}
     m_Scale: {x: 0.1, y: 1, z: 0.1}
     placementMode: 0
@@ -2864,7 +2864,7 @@ ParticleSystem:
     - serializedVersion: 2
       emitter: {fileID: 198989178813029916}
       type: 0
-      properties: 0
+      properties: 1
   LightsModule:
     enabled: 0
     ratio: 0
@@ -3798,7 +3798,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 0.2352941, b: 0.2352941, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

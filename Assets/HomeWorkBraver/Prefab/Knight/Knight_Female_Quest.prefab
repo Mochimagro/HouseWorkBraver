@@ -1687,6 +1687,8 @@ MonoBehaviour:
   speed: 1.5
   intervalTime: 5
   Weapon: {fileID: 1500088915822928}
+  SliderHpGauge: {fileID: 0}
+  TextHp: {fileID: 0}
 --- !u!135 &135114276787933772
 SphereCollider:
   m_ObjectHideFlags: 1
