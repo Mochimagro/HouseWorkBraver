@@ -18,6 +18,7 @@ public class BraverQuestManager : MonoBehaviour {
     public GameObject SliderIntervalGuage;
     private Slider intervalSlider;
 
+    private QuestManager questManager;
 	private Animator animator;
     private SphereCollider attackArea;
     private BoxCollider weaponCollider;
@@ -26,6 +27,7 @@ public class BraverQuestManager : MonoBehaviour {
     private GameObject target;
 
     private void Start() {
+        questManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
         animator = GetComponent<Animator>();
         weaponCollider = Weapon.GetComponent<BoxCollider>();
         animator.speed = speed;
@@ -53,6 +55,7 @@ public class BraverQuestManager : MonoBehaviour {
 
     public void Damage(int atk){
         hp -= atk;
+        questManager.SetDamageText(atk);
         if(hp <= 0){
             hp = 0;
             Death();

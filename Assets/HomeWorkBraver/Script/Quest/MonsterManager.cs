@@ -13,8 +13,10 @@ public class MonsterManager : MonoBehaviour {
 	private Rigidbody rbody;
 	private bool onFloor;
 	private BraverQuestManager braver;
+	private QuestManager questManager;
 
 	private void Start(){
+		questManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
 		rbody = GetComponent<Rigidbody>();
 		rbody.AddForce(transform.forward * speed);
 		braver = GameObject.FindGameObjectWithTag("Braver").GetComponent<BraverQuestManager>();
@@ -56,6 +58,7 @@ public class MonsterManager : MonoBehaviour {
 
 	public void Damage(int atk){
 		hp -= atk;
+		questManager.SetDamageText(atk,transform.position);
 		if(hp > 0){
 			KnockBack();
 		}else{

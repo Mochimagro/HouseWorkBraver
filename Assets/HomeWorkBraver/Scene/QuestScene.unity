@@ -2282,6 +2282,31 @@ Prefab:
       propertyPath: SliderIntervalGuage
       value: 
       objectReference: {fileID: 1724560191}
+    - target: {fileID: 114851329899086952, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: intervalTime
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114851329899086952, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: hp
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 65310507782567028, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 65310507782567028, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 65310507782567028, guid: f9a6010b9b49c154f905f0f75bdecafe,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 8.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9a6010b9b49c154f905f0f75bdecafe, type: 2}
   m_IsPrefabParent: 0
@@ -4092,11 +4117,11 @@ RectTransform:
   m_Father: {fileID: 1724560192}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -74.99994, y: -17.499023}
-  m_SizeDelta: {x: 222.8, y: 22.2}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1430059813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4144,8 +4169,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 30.1
-  m_fontSizeBase: 30.1
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4193,11 +4218,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -4267,14 +4292,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.66176474, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5a0583c48a1b49c4ca0258cc52637db6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0eef525b6732b4747ac8b5bc47db2905, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6066,6 +6091,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Monster: {fileID: 1659499700877336, guid: ad5b8b6dae5df274d8b2757e0b5a0b3a, type: 2}
   objectSummonPosition: {fileID: 476585666}
+  TextBraverDamage: {fileID: 1450952291271886, guid: ef7c9e2599035224c935a201855f7e8a,
+    type: 2}
+  TextMonsterDamage: {fileID: 1570999273996282, guid: aaf2623870a4d5d43bd079585cf28027,
+    type: 2}
+  CanvasUI: {fileID: 559221806}
 --- !u!1001 &2114146540
 Prefab:
   m_ObjectHideFlags: 0
