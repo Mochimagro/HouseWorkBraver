@@ -58,7 +58,7 @@ public class MonsterManager : MonoBehaviour {
 
 	public void Damage(int atk){
 		hp -= atk;
-		questManager.SetDamageText(atk,transform.position);
+		questManager.SetDamageText(atk,gameObject.transform.position);
 		if(hp > 0){
 			KnockBack();
 		}else{

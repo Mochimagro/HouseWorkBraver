@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 224177009064093222}
   - component: {fileID: 222227332478767576}
   - component: {fileID: 114259674859147406}
-  - component: {fileID: 95101503578943854}
+  - component: {fileID: 95974392739980354}
   m_Layer: 5
   m_Name: TextMonsterDamage
   m_TagString: Untagged
@@ -29,7 +29,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &95101503578943854
+--- !u!95 &95974392739980354
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -38,7 +38,7 @@ Animator:
   m_GameObject: {fileID: 1570999273996282}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6aeb21051ffee434285decf79d4c7df9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9908cf0b8c828df4ca19e8ba7ef76d59, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -180,6 +180,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -41, y: 128}
+  m_AnchoredPosition: {x: -132, y: 166}
   m_SizeDelta: {x: 350, y: 90}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
