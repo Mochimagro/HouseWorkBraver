@@ -2285,7 +2285,7 @@ Prefab:
     - target: {fileID: 114851329899086952, guid: f9a6010b9b49c154f905f0f75bdecafe,
         type: 2}
       propertyPath: intervalTime
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114851329899086952, guid: f9a6010b9b49c154f905f0f75bdecafe,
         type: 2}
@@ -5673,7 +5673,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6089,8 +6089,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba0a89371f5d1db4ca6315546ebdcd62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BraverHP: 150
+  BraverAtk: 13
   Monster: {fileID: 1659499700877336, guid: ad5b8b6dae5df274d8b2757e0b5a0b3a, type: 2}
   objectSummonPosition: {fileID: 476585666}
+  textHp: {fileID: 328207662}
+  sliderHpGauge: {fileID: 1990857526}
   TextBraverDamage: {fileID: 1450952291271886, guid: ef7c9e2599035224c935a201855f7e8a,
     type: 2}
   TextMonsterDamage: {fileID: 1570999273996282, guid: aaf2623870a4d5d43bd079585cf28027,

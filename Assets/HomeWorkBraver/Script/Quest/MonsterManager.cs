@@ -39,7 +39,7 @@ public class MonsterManager : MonoBehaviour {
 			var pos = other.transform.position;
 			pos.y += 2f;
 			Instantiate(effectAttackMonster,pos,Quaternion.identity);
-			braver.Damage(atk);
+			questManager.BraverDamage(atk);
 			KnockBack();
 		}
 
@@ -48,7 +48,7 @@ public class MonsterManager : MonoBehaviour {
 	private void OnTriggerEnter(Collider other) {
 		if(other.gameObject.CompareTag("Weapon")){
 			if(onFloor){
-				Damage(braver.atk);
+				Damage(questManager.BraverAtk);
 				//Damage(GetComponent<BraverQuestManager>().atk);
 			}
 			

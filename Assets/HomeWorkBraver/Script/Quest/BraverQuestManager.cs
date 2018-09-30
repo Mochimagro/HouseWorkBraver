@@ -6,14 +6,9 @@ using UnityEngine.UI;
 
 public class BraverQuestManager : MonoBehaviour {
 
-    public int hp = 50;
-    private int maxHp;
-    public int atk = 3;
     public float speed = 1.5f;
     public float intervalTime = 5.0f;
     public GameObject Weapon;
-    public Slider SliderHpGauge;
-    public TextMeshProUGUI TextHp;
     
     public GameObject SliderIntervalGuage;
     private Slider intervalSlider;
@@ -33,11 +28,8 @@ public class BraverQuestManager : MonoBehaviour {
         animator.speed = speed;
         animator.SetFloat("Speed",1);
         pos = transform.position;
-        maxHp = hp;
-        SliderHpGauge.maxValue = maxHp;
         intervalSlider = SliderIntervalGuage.GetComponent<Slider>();
         intervalSlider.maxValue = intervalTime;
-        SetHpUI();
     }
 
     private void Update() {
@@ -53,24 +45,11 @@ public class BraverQuestManager : MonoBehaviour {
         }
     }
 
-    public void Damage(int atk){
-        hp -= atk;
-        questManager.SetDamageText(atk);
-        if(hp <= 0){
-            hp = 0;
-            Death();
-        }
-        SetHpUI();
-    }
 
-    private void Death(){
+    public void Death(){
         animator.SetTrigger("Death");
     }
 
-    public void SetHpUI(){
-        TextHp.text = hp + " / " + maxHp;
-        SliderHpGauge.value = hp;
-    }
 
     private void SetIntervalSlider(){
         
