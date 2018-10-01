@@ -66,13 +66,21 @@ public class QuestManager : MonoBehaviour {
 		Destroy(tmpText,1.0f);
 	}
 
+	/*
 	public void SetDamageText(int value,Vector3 targetPos){
 		var tmpText = Instantiate(TextMonsterDamage);
 		tmpText.transform.SetParent(CanvasUI.transform,false);
 		tmpText.GetComponent<RectTransform>().position = RectTransformUtility.WorldToScreenPoint(Camera.main,targetPos);
 		tmpText.GetComponent<TextMeshProUGUI>().text = "" + value;
 		Destroy(tmpText,1.0f);
-
 	}
+	 */
+
+	public void SetDamageText(int value,Vector3 targetPos){
+		var tmpText = Instantiate(TextMonsterDamage,targetPos,Quaternion.identity);
+		tmpText.GetComponentInChildren<TextMeshPro>().text = "" + value;
+		Destroy(tmpText,1.0f);
+	}
+
 
 }
