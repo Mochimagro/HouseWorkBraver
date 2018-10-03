@@ -9,6 +9,7 @@ TagManager:
   - Weapon
   - Monster
   - Field
+  - Jewel
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Stage
   - Brever
   - Monster
-  - 
+  - Jewel
   - 
   - 
   - 
