@@ -9,6 +9,7 @@ public class QuestManager : MonoBehaviour {
 	public int BraverHP;
 	private int BraverMaxHP;
 	public int BraverAtk;
+	private int whiteJewels;
 
 	public GameObject Monster;
 
@@ -24,6 +25,8 @@ public class QuestManager : MonoBehaviour {
 	private Vector3 summonPosition;
 	private Vector3 braverPosRect;
 
+	public TextMeshProUGUI textWhiteJewels;
+
 	private void Start() {
 		braverObject = GameObject.FindGameObjectWithTag("Braver");
 		braverQuestManager = braverObject.GetComponent<BraverQuestManager>();
@@ -33,6 +36,9 @@ public class QuestManager : MonoBehaviour {
 		summonPosition = objectSummonPosition.transform.position;
 		sliderHpGauge.maxValue = BraverMaxHP;
 		SetHpUI();
+
+		whiteJewels = 0;
+		SetJewelText();
 
 	}
 
@@ -82,5 +88,14 @@ public class QuestManager : MonoBehaviour {
 		Destroy(tmpText,1.0f);
 	}
 
+
+	public void AddJewel(int value){
+		whiteJewels += value;
+		SetJewelText();
+	}
+
+	private void SetJewelText(){
+		textWhiteJewels.text = "" + whiteJewels;
+	}
 
 }

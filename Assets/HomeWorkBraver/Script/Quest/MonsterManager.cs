@@ -6,6 +6,7 @@ public class MonsterManager : MonoBehaviour {
 
 	public int hp = 5;
 	public int atk = 5;
+	public int jewel = 0;
 
 	public float speed = 5f;
 	public GameObject effectKnockdown;
@@ -62,14 +63,16 @@ public class MonsterManager : MonoBehaviour {
 		if(hp > 0){
 			KnockBack();
 		}else{
-			KnockDown();
+			Death();
 		}
 	}
 
-	private void KnockDown(){
+	private void Death(){
 		Destroy(gameObject);
 		var eff = Instantiate(effectKnockdown,transform.position,Quaternion.identity);
-
+		var pos = transform.position;
+		pos.y += 3;
+		GameObject.Find("QuestManager").GetComponent<JewelMakerManager>().MakeJewels(jewel,pos);
 	}
 
 	private void KnockBack(){
