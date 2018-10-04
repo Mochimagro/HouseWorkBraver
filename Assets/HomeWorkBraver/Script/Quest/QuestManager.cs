@@ -11,9 +11,7 @@ public class QuestManager : MonoBehaviour {
 	public int BraverAtk;
 	private int whiteJewels;
 
-	public GameObject Monster;
 
-	public GameObject objectSummonPosition;
 
 	public TextMeshProUGUI textHp;
 	public Slider sliderHpGauge;
@@ -22,7 +20,7 @@ public class QuestManager : MonoBehaviour {
 	public Canvas CanvasUI;
 	private GameObject braverObject;
 	private BraverQuestManager braverQuestManager;
-	private Vector3 summonPosition;
+
 	private Vector3 braverPosRect;
 
 	public TextMeshProUGUI textWhiteJewels;
@@ -33,7 +31,7 @@ public class QuestManager : MonoBehaviour {
 		braverPosRect = RectTransformUtility.WorldToScreenPoint(Camera.main,braverObject.transform.position);
 		
 		BraverMaxHP = BraverHP;
-		summonPosition = objectSummonPosition.transform.position;
+
 		sliderHpGauge.maxValue = BraverMaxHP;
 		SetHpUI();
 
@@ -42,10 +40,7 @@ public class QuestManager : MonoBehaviour {
 
 	}
 
-	public void MonsterSummon(){
-		Instantiate(Monster,summonPosition,Monster.transform.rotation);
-	}
-
+	
 	public void BraverDamage(int atk){
 		BraverHP -= atk;
 		SetDamageText(atk);
