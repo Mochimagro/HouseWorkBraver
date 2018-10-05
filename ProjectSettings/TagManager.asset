@@ -8,6 +8,8 @@ TagManager:
   - Braver
   - Weapon
   - Monster
+  - Field
+  - Jewel
   layers:
   - Default
   - TransparentFX
@@ -20,6 +22,7 @@ TagManager:
   - Stage
   - Brever
   - Monster
+  - Jewel
   - 
   - 
   - 
@@ -37,8 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Effect
   - UIEffect
   - 
   m_SortingLayers:

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198468873025594222}
   - component: {fileID: 199895183410054756}
   - component: {fileID: 82072226115191374}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: EffectKnockdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1446809238270822}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243362711351024502, guid: b2a2473c858d3844c971ad29a0d3ea15,
     type: 2}

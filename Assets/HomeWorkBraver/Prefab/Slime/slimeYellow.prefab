@@ -244,4 +244,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectKnockdoun: {fileID: 1446809238270822, guid: dd192254e9ce0d442bb0ebc0186bb765,
     type: 2}
-  exp: 10
+  exp: 55

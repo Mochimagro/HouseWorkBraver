@@ -15,6 +15,7 @@ public class HomeManager : MonoBehaviour {
 
 	public Canvas CanvasUIText;
 	public GameObject TextGetExp;
+	public GameObject TextLevelUP;
 
 	private void Start() {
 		braverExp = 0;
@@ -66,6 +67,7 @@ public class HomeManager : MonoBehaviour {
 		}
 		SetExpSliderMaxValue();
 		SetLevelText();
+		TextLevelUP.SetActive(true);
 	}
 
 }

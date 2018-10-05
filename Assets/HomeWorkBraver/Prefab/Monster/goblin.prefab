@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 65505239048956796}
   - component: {fileID: 54496462740776500}
   - component: {fileID: 114963283506760498}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: goblin
   m_TagString: Monster
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 4582435654086088}
   - component: {fileID: 33861875725462852}
   - component: {fileID: 23754790743266112}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: goblin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,11 +123,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!65 &65505239048956796
 BoxCollider:
@@ -136,7 +136,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1659499700877336}
   m_Material: {fileID: 13400000, guid: 6c010636b6125094782c62c1d8fb19f8, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 10, y: 20, z: 5}
@@ -152,6 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b89ba22d5990924483d90adad872d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  hp: 5
+  atk: 5
+  jewel: 7
+  speed: 200
   effectKnockdown: {fileID: 1446809238270822, guid: dd192254e9ce0d442bb0ebc0186bb765,
+    type: 2}
+  effectAttackMonster: {fileID: 1642258846666864, guid: 75040fdf90bac1a45964c500b8e286cc,
     type: 2}

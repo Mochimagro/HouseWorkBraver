@@ -1,37 +1,83 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class BraverQuestManager : MonoBehaviour {
 
+    public float speed = 1.5f;
+    public float intervalTime = 5.0f;
+    public GameObject Weapon;
+    
+    public GameObject SliderIntervalGuage;
+    private Slider intervalSlider;
+
+    private QuestManager questManager;
 	private Animator animator;
     private SphereCollider attackArea;
+    private BoxCollider weaponCollider;
     private Vector3 pos;
+    private float interval = 0;
+    private GameObject target;
 
     private void Start() {
+        questManager = GameObject.Find("QuestManager").GetComponent<QuestManager>();
         animator = GetComponent<Animator>();
-        animator.speed = 1.5f;
+        weaponCollider = Weapon.GetComponent<BoxCollider>();
+        animator.speed = speed;
         animator.SetFloat("Speed",1);
         pos = transform.position;
-        
+        intervalSlider = SliderIntervalGuage.GetComponent<Slider>();
+        intervalSlider.maxValue = intervalTime;
+    }
+
+    private void Update() {
+        SetIntervalSlider();
     }
 
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Monster")){
-            animator.SetTrigger("Attack");
+            if(interval <= 0){
+                animator.SetTrigger("Attack");
+                interval = intervalTime;
+            }
         }
     }
 
-    private void Hit(){
 
+    public void Death(){
+        animator.SetTrigger("Death");
+    }
+
+
+    private void SetIntervalSlider(){
+        
+        if(interval > 0){
+            if(!SliderIntervalGuage.activeSelf){
+                SliderIntervalGuage.SetActive(true);
+            }
+            interval -= Time.deltaTime;
+            intervalSlider.value = interval;
+            if(interval <= 0){
+                SliderIntervalGuage.SetActive(false);
+            }
+        }
+        
+    }
+
+    //アニメーション用
+
+    private void Hit(){
     }
 
     private void HittingAttack(){
-
+        weaponCollider.enabled = true;
     }
 
     private void FinishAttack(){
         transform.position = pos;
+        weaponCollider.enabled = false;
     }
 
 }

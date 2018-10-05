@@ -44,7 +44,7 @@ public class SlimeMakerManager : MonoBehaviour {
 	}
 
 	private void GenerateSlime(){
-		var slime = Instantiate(slimeList[0],generatePosision,Quaternion.Euler(0,Random.Range(0,360),0));
+		var slime = Instantiate(slimeList[Random.Range(0,slimeList.Count - 1)],generatePosision,Quaternion.Euler(0,Random.Range(0,360),0));
 		Vector3 force = new Vector3(Random.Range(-300,300),300,Random.Range(-500,-1000));
 		slime.GetComponent<Rigidbody>().AddForce(force);
 		aliveSlimeList.Add(slime);
