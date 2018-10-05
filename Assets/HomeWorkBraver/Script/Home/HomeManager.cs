@@ -17,7 +17,11 @@ public class HomeManager : MonoBehaviour {
 	public GameObject TextGetExp;
 	public GameObject TextLevelUP;
 
+	private DataManager dataManager;
+
 	private void Start() {
+		dataManager = GetComponent<DataManager>();
+
 		braverExp = 0;
 		nextExp = 10;
 		braverLevel = 1;
@@ -33,6 +37,8 @@ public class HomeManager : MonoBehaviour {
 		}
 		SetExpText();
 		SetExpSlider();
+
+		dataManager.DataSave(braverExp,DataName.braverEXP);
 
 		var tmpText = Instantiate(TextGetExp);
 		tmpText.transform.SetParent(CanvasUIText.transform,false);
@@ -68,6 +74,7 @@ public class HomeManager : MonoBehaviour {
 		SetExpSliderMaxValue();
 		SetLevelText();
 		TextLevelUP.SetActive(true);
+		dataManager.DataSave(braverLevel,DataName.braverLevel);
 	}
 
 }
