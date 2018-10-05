@@ -14,6 +14,7 @@ public class BraverHomeManager : MonoBehaviour {
 	private NavMeshAgent agent;
 	private Animator animator;
 
+
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();
 		animator = GetComponent<Animator>();
@@ -22,6 +23,9 @@ public class BraverHomeManager : MonoBehaviour {
 		weaponCollider.enabled = false;
 		attackArea = GetComponent<SphereCollider>();
 		attackArea.enabled = false;
+
+
+
 		targetList.Clear();
 
         // ターゲットの位置を目的地に設定する。

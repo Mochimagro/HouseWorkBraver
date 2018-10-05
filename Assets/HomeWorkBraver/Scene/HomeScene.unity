@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44418257, g: 0.49361807, b: 0.5730196, a: 1}
+  m_IndirectSpecularColor: {r: 0.44418263, g: 0.49361867, b: 0.5730204, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -641,6 +641,21 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 198204528597021164, guid: 8a2e8af75b1589e41bf0876750aa1f30,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198204528597021164, guid: 8a2e8af75b1589e41bf0876750aa1f30,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 198204528597021164, guid: 8a2e8af75b1589e41bf0876750aa1f30,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a2e8af75b1589e41bf0876750aa1f30, type: 2}
   m_IsPrefabParent: 0
@@ -942,10 +957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4437d0fd8375684c8706249616b8072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusList:
-  - braverName: Knight
-    hp: 0a0000000c0000000f0000001100000013000000
-    atk: 0000000000000000000000000000000000000000
 --- !u!114 &478863385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1585,6 +1596,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1268022338}
   - component: {fileID: 1268022339}
+  - component: {fileID: 1268022340}
   - component: {fileID: 1268022337}
   m_Layer: 0
   m_Name: HomeManager
@@ -1704,6 +1716,20 @@ MonoBehaviour:
   CanvasUIText: {fileID: 1423665546}
   TextGetExp: {fileID: 1856179928549024, guid: b48c5692701e64f47a752fb9e15ca028, type: 2}
   TextLevelUP: {fileID: 322787642}
+--- !u!114 &1268022340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1268022336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa5a43409c051a4194744d23a7c14bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataEXP: -1
+  dataLevel: -1
+  dataBraverName: NONE_NAME
 --- !u!1 &1283986432
 GameObject:
   m_ObjectHideFlags: 0
